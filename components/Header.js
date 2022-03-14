@@ -1,6 +1,10 @@
-import { Button, Container, Grid, GridItem, Link } from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import { useMediaQuery, Button, Container, Grid, GridItem, IconButton, Link, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 
 export default function Header() {
+
+    const [ismobile] = useMediaQuery('(max-width: 600px)')
+
     return (
         <>
             <div id="header">
@@ -9,18 +13,31 @@ export default function Header() {
                     <GridItem colSpan={1}>
                         <img src="/logo.svg"/>
                     </GridItem>
-                    <GridItem colSpan={2}>
-                    <div className="navBar">
-                        <Link href="/">Home</Link>
-                        <Link href="/">About</Link>
-                        <Link href="/">Services</Link>
-                        <Link href="/">Contact</Link>
-                    </div>
-                    </GridItem>
-                    <GridItem colSpan={1} style={{textAlign: 'right'}}>
+                    {!ismobile && 
+                        <GridItem colSpan={2}>
+                            <div className="navBar">
+                                <Link href="/">Home</Link>
+                                <Link href="/">About</Link>
+                                <Link href="/">Services</Link>
+                                <Link href="/">Contact</Link>
+                            </div>
+                        </GridItem>
+                    }
+                    <GridItem colSpan={ismobile ? 3 : 1} style={{textAlign: 'right'}}>
                     <Button style={{borderRadius: '20px'}} colorScheme='teal' variant='outline'>
                         Get started
                     </Button>
+                    {ismobile && 
+                        <Menu>
+                        <MenuButton style={{marginLeft: '10px'}} as={IconButton} icon={<HamburgerIcon />} />
+                        <MenuList>
+                            <MenuItem>Home</MenuItem>
+                            <MenuItem>About</MenuItem>
+                            <MenuItem>Service</MenuItem>
+                            <MenuItem>Contact</MenuItem>
+                        </MenuList>
+                        </Menu>
+                    }
                     </GridItem>
                 </Grid>
                 </Container>

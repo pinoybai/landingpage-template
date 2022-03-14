@@ -13,7 +13,7 @@ export default function FAQ(){
         <p>Ask your question and meet</p>
         <h2>Frequently Asked Question</h2>
         <Container style={{padding: '80px 16px'}} maxW='container.xl'>
-            <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+            <Grid className={styles.faqGridWrapper} templateColumns='repeat(3, 1fr)' gap={6}>
                 <GridItem className={styles.sectionLeft} colSpan={1}>
                   <h3>Do you have any quesiton? Please ask here we ready to support</h3>
                   <p>If your question is not list here, please feel free to make a manual support.</p>

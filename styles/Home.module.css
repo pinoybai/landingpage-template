@@ -167,3 +167,14 @@
     border-radius: 6px;
     margin: 20px 0;
 }
+
+@media screen and (max-width: 600px) {
+  .gridWrapper, .twoColSecitonWrapper, .faqGridWrapper{
+    display:flex !important;
+    flex-direction: column !important;
+  }
+
+  .gridWrapper .gridCardItem{
+    text-align: center;
+  }
+}

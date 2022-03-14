@@ -9,7 +9,7 @@ export default function GridCardSection() {
                 <p>WHATS THE FUNCTION</p>
                 <h2>Meet the feature of product</h2>
                 <Container style={{padding: '80px 16px'}} maxW='container.xl'>
-                <Grid templateColumns='repeat(4, 1fr)' gap={12}>
+                <Grid className={styles.gridWrapper} templateColumns='repeat(4, 1fr)' gap={12}>
                     <GridItem className={styles.gridCardItem} colSpan={1}>
                         <div style={{background: '#da297a'}}>
                         <ArrowForwardIcon color="#fff" w={10} h={10} />

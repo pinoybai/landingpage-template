@@ -27,7 +27,7 @@ export default function Home() {
       <GridCardSection />
       <div className={styles.twoColSection}>
         <Container style={{padding: '80px 16px'}} maxW='container.xl'>
-          <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+          <Grid className={styles.twoColSecitonWrapper} templateColumns='repeat(3, 1fr)' gap={6}>
               <GridItem className={styles.sectionLeft} colSpan={1}>
                 <h4>CORE FEATURES</h4>
                 <h2>Smart Jackpots that you may love this anytime &amp; anywhere</h2>
@@ -46,7 +46,7 @@ export default function Home() {
 
       <div className={styles.twoColSection}>
         <Container style={{padding: '80px 16px'}} maxW='container.xl'>
-          <Grid templateColumns='repeat(3, 1fr)' gap={6}>
+          <Grid className={styles.twoColSecitonWrapper} templateColumns='repeat(3, 1fr)' gap={6}>
               <GridItem className={styles.sectionRight} colSpan={2}>
                 <img src="/core-feature.png"/>
                 <div className={styles.featureImageBgLeft}>
