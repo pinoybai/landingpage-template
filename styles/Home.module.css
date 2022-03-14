@@ -9,6 +9,7 @@
   margin: 0 auto;
   font-weight: 700;
   line-height: 70px;
+  max-width: 100%;
 }
 
 .mainJumbo > h4{
@@ -17,6 +18,7 @@
   margin: 20px auto;
   text-align: center;
   padding: 0 30px;
+  max-width: 100%;
 }
 
 .mainJumbo button{
@@ -176,5 +178,13 @@
 
   .gridWrapper .gridCardItem{
     text-align: center;
+  }
+
+  .featureImageBg{
+    display: none;
+  }
+
+  .contactForm{
+    width: 300px;
   }
 }
